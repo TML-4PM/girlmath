@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/webp" href="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/images/AHC%20droid%20head.webp">
-  <link rel="apple-touch-icon" href="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/images/AHC%20droid%20head.webp">
-  <meta property="og:image" content="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/images/AHC%20droid%20head.webp">
+  <link rel="icon" type="image/png" href="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/shared_assets/girlmath_favicon">
+  <link rel="apple-touch-icon" href="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/shared_assets/girlmath_favicon">
+  <meta property="og:image" content="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/shared_assets/girlmath_og_image">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/images/AHC%20droid%20head.webp">
+  <meta name="twitter:image" content="https://pflisxkcxbzboxwidywf.supabase.co/storage/v1/object/public/shared_assets/girlmath_og_image">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>GirlMath — The Cultural Finance Phenomenon</title>
+  <title>GirlMath™ — Justify Any Purchase</title>
+  <meta name="description" content="Justify any purchase with GirlMath™ logic. Part of the Delulu Network.">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --primary:#8B1a6b;
-      --deep:#4a0d3a;
-      --light:#c02e9a;
-      --accent:#ff9de2;
-      --bg:#fff0fa;
-      --white:#ffffff;
-      --text:#1a1a2e;
-      --muted:#666;
+      --primary:#8B1a6b;--deep:#4a0d3a;--light:#c02e9a;
+      --accent:#ff9de2;--bg:#fff0fa;--white:#ffffff;
+      --text:#1a1a2e;--muted:#666;
     }
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
     a{color:var(--accent);text-decoration:none}
 
     /* NAV */
-    nav{background:var(--deep);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-    .nav-logo{color:var(--white);font-weight:700;font-size:1.1rem;letter-spacing:-0.02em}
+    nav{background:var(--deep);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;gap:1rem;flex-wrap:wrap}
+    .nav-logo{color:var(--white);font-weight:800;font-size:1.1rem;letter-spacing:-0.02em}
     .nav-logo span{color:var(--accent)}
-    .nav-cta{background:var(--accent);color:var(--deep)!important;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600;font-size:0.85rem}
+    .nav-links{display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap}
+    .nav-cta{background:var(--accent);color:var(--deep)!important;padding:0.45rem 1.1rem;border-radius:4px;font-weight:700;font-size:0.82rem}
+    .nav-link{color:rgba(255,255,255,0.75);font-size:0.82rem;font-weight:500;padding:0.45rem 0.75rem;border-radius:4px;transition:color .15s}
+    .nav-link:hover{color:var(--white)}
 
     /* HERO */
     .hero{background:linear-gradient(135deg,var(--deep) 0%,var(--primary) 100%);color:var(--white);padding:5rem 2rem 4rem;text-align:center}
@@ -36,9 +35,9 @@
     .hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
     .hero h1 em{color:var(--accent);font-style:normal}
     .hero-desc{font-size:1.1rem;opacity:0.85;max-width:680px;margin:0 auto 2.5rem}
-    .btn-primary{background:var(--accent);color:var(--deep);padding:0.9rem 2.2rem;border-radius:6px;font-weight:700;font-size:0.95rem;border:none;cursor:pointer;letter-spacing:0.02em;display:inline-block;transition:opacity 0.2s}
+    .btn-primary{background:var(--accent);color:var(--deep);padding:0.9rem 2.2rem;border-radius:6px;font-weight:700;font-size:0.95rem;border:none;cursor:pointer;letter-spacing:0.02em;display:inline-block;transition:opacity .2s}
     .btn-primary:hover{opacity:0.85}
-    .btn-outline{background:transparent;color:var(--white);padding:0.9rem 2.2rem;border-radius:6px;font-weight:600;font-size:0.95rem;border:2px solid rgba(255,255,255,0.3);cursor:pointer;margin-left:1rem}
+    .btn-outline{background:transparent;color:var(--white);padding:0.9rem 2.2rem;border-radius:6px;font-weight:600;font-size:0.95rem;border:2px solid rgba(255,255,255,0.3);cursor:pointer;margin-left:1rem;display:inline-block}
     .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
     /* STATS */
@@ -47,17 +46,60 @@
     .stat-num{font-size:1.8rem;font-weight:800;color:var(--primary)}
     .stat-label{font-size:0.75rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase}
 
-    /* SERVICES */
+    /* SECTION */
     .section{padding:4rem 2rem;max-width:1100px;margin:0 auto}
     .section-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem}
     .section-title{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;color:var(--deep);margin-bottom:0.5rem}
     .section-sub{color:var(--muted);margin-bottom:3rem;max-width:600px}
     .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
-    .svc-card{background:var(--white);border-radius:12px;padding:1.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.2s,box-shadow 0.2s}
+    .svc-card{background:var(--white);border-radius:12px;padding:1.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform .2s,box-shadow .2s}
     .svc-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}
     .svc-icon{font-size:2rem;margin-bottom:0.8rem}
     .svc-name{font-weight:700;font-size:1rem;color:var(--deep);margin-bottom:0.4rem}
-    .svc-desc{font-size:0.875rem;color:var(--muted);line-height:1.5}
+    .svc-desc{font-size:0.875rem;color:var(--muted);line-height:1.5;margin-bottom:1rem}
+    .svc-cta{display:inline-block;background:var(--primary);color:var(--white);padding:0.5rem 1.1rem;border-radius:5px;font-size:0.8rem;font-weight:700;cursor:pointer;transition:opacity .2s}
+    .svc-cta:hover{opacity:0.85}
+    .svc-cta.outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+
+    /* MEMBERS BAND */
+    .members-band{background:linear-gradient(135deg,var(--primary) 0%,#d4398a 100%);color:var(--white);padding:4rem 2rem;text-align:center}
+    .members-band h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:0.75rem}
+    .members-band p{opacity:0.88;margin-bottom:0.5rem;max-width:520px;margin-left:auto;margin-right:auto}
+    .members-price{font-size:2.5rem;font-weight:800;color:var(--accent);margin:1rem 0 0.25rem}
+    .members-price span{font-size:1rem;font-weight:500;opacity:0.8}
+    .members-perks{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin:1.5rem 0 2rem;opacity:0.9;font-size:0.85rem}
+    .members-perks li{list-style:none}
+    .members-perks li::before{content:"✓ "}
+    .btn-members{background:var(--accent);color:var(--deep);padding:1rem 2.5rem;border-radius:6px;font-weight:800;font-size:1rem;border:none;cursor:pointer;display:inline-block;transition:transform .15s,opacity .15s}
+    .btn-members:hover{transform:scale(1.03);opacity:0.92}
+    .members-note{font-size:0.75rem;opacity:0.65;margin-top:0.75rem}
+
+    /* MEMBERS SIGNUP (email OTP) */
+    .members-signup{background:var(--white);border-radius:12px;padding:2rem;max-width:420px;margin:2rem auto 0;box-shadow:0 4px 20px rgba(0,0,0,0.15)}
+    .members-signup h3{color:var(--deep);font-weight:700;font-size:1rem;margin-bottom:1rem}
+    .otp-input{width:100%;padding:0.75rem;border:2px solid #e2b8d8;border-radius:6px;font-size:0.95rem;outline:none;transition:border .2s;margin-bottom:0.75rem}
+    .otp-input:focus{border-color:var(--primary)}
+    .btn-otp{width:100%;background:var(--primary);color:var(--white);padding:0.85rem;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.9rem;transition:opacity .2s}
+    .btn-otp:hover{opacity:0.85}
+    .otp-msg{font-size:0.8rem;margin-top:0.6rem;min-height:1.2rem;text-align:center}
+    .otp-step{display:none}
+    .otp-step.active{display:block}
+
+    /* CALCULATOR SECTION */
+    .calculator-section{background:var(--white);border-radius:16px;padding:2.5rem;max-width:600px;margin:0 auto;box-shadow:0 4px 24px rgba(139,26,107,0.1)}
+    .calc-input-row{display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap}
+    .calc-input-row input{flex:1;min-width:160px;padding:0.75rem;border:2px solid #e2b8d8;border-radius:6px;font-size:0.95rem;outline:none;transition:border .2s}
+    .calc-input-row input:focus{border-color:var(--primary)}
+    .btn-calc{background:var(--primary);color:var(--white);padding:0.75rem 1.5rem;border:none;border-radius:6px;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .2s}
+    .btn-calc:hover{opacity:0.85}
+    .calc-result{background:linear-gradient(135deg,var(--deep),var(--primary));color:var(--white);border-radius:10px;padding:1.5rem;margin-top:1.25rem;display:none}
+    .calc-result.show{display:block}
+    .calc-result .justified{font-size:1.4rem;font-weight:800;margin-bottom:0.5rem}
+    .calc-result .logic{font-size:0.88rem;opacity:0.85;line-height:1.5}
+    .calc-pro-upsell{background:rgba(255,157,226,0.12);border:1px solid var(--accent);border-radius:8px;padding:1rem;margin-top:1rem;text-align:center}
+    .calc-pro-upsell p{font-size:0.82rem;color:var(--deep);margin-bottom:0.6rem}
+    .btn-unlock{background:var(--accent);color:var(--deep);padding:0.5rem 1.3rem;border-radius:5px;font-weight:800;font-size:0.82rem;border:none;cursor:pointer;display:inline-block;transition:opacity .2s}
+    .btn-unlock:hover{opacity:0.85}
 
     /* CTA BAND */
     .cta-band{background:linear-gradient(135deg,var(--primary),var(--light));color:var(--white);padding:4rem 2rem;text-align:center}
@@ -69,10 +111,11 @@
     @media(max-width:640px){.contact-wrap{grid-template-columns:1fr}}
     .form-group{margin-bottom:1rem}
     .form-group label{display:block;font-size:0.8rem;font-weight:600;color:var(--deep);margin-bottom:0.3rem;text-transform:uppercase;letter-spacing:0.05em}
-    .form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;font-size:0.9rem;outline:none;transition:border 0.2s}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;font-size:0.9rem;outline:none;transition:border .2s}
     .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary)}
     .form-group textarea{height:100px;resize:vertical}
-    .form-submit{width:100%;background:var(--primary);color:var(--white);padding:1rem;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.95rem}
+    .form-submit{width:100%;background:var(--primary);color:var(--white);padding:1rem;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.95rem;transition:opacity .2s}
+    .form-submit:hover{opacity:0.85}
     .contact-info h3{font-size:1.2rem;font-weight:700;color:var(--deep);margin-bottom:1.5rem}
     .contact-item{display:flex;gap:0.8rem;margin-bottom:1rem;align-items:flex-start}
     .contact-item-icon{font-size:1.2rem;margin-top:0.1rem}
@@ -80,74 +123,150 @@
     .contact-item-label{font-weight:600;color:var(--deep);font-size:0.85rem}
 
     /* FOOTER */
-    footer{background:var(--deep);color:rgba(255,255,255,0.6);padding:2rem;text-align:center;font-size:0.8rem}
+    footer{background:var(--deep);color:rgba(255,255,255,0.6);padding:2.5rem 2rem;text-align:center;font-size:0.8rem}
     footer strong{color:var(--white)}
+    .footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem}
+    .footer-links a{color:rgba(255,255,255,0.5);font-size:0.78rem;transition:color .15s}
+    .footer-links a:hover{color:var(--accent)}
 
-    /* SUCCESS */
+    /* UTILS */
     .success-banner{display:none;background:#d4edda;border:1px solid #c3e6cb;color:#155724;padding:1rem 1.5rem;border-radius:8px;margin-bottom:1rem;font-weight:600}
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">GirlMath <span></span></div>
-  <a href="#contact" class="nav-cta">Run the Numbers</a>
+  <div class="nav-logo">GirlMath <span>™</span></div>
+  <div class="nav-links">
+    <a href="#calculator" class="nav-link">Calculator</a>
+    <a href="#members" class="nav-link">Members</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="https://buy.stripe.com/bJedR8dQogxFbp11yw4ZG0Q" class="nav-cta" target="_blank">Join Members $9/mo</a>
+  </div>
 </nav>
 
 <section class="hero">
-  <div class="hero-tag">T4H Portfolio · FUN</div>
-  <h1>GirlMath<br><em>The Cultural Finance Phenomenon</em></h1>
-  <p class="hero-desc">GirlMath is the brand at the intersection of culture, humour, and financial literacy. Celebrating the creative logic of rational spending decisions — and turning the internet's favourite financial mem...</p>
+  <div class="hero-tag">Delulu Network · FUN</div>
+  <h1>GirlMath<em>™</em><br><em>Make It Make Sense</em></h1>
+  <p class="hero-desc">The internet's favourite financial justification engine. Turns any purchase into a rational decision. Celebrating the creative logic that actually works.</p>
   <div class="hero-btns">
-    <a href="#contact" class="btn-primary">Run the Numbers</a>
-    <a href="#services" class="btn-outline">Learn More</a>
+    <a href="#calculator" class="btn-primary">Run the Numbers</a>
+    <a href="#members" class="btn-outline">Join Members ✨</a>
   </div>
 </section>
 
 <div class="stats">
-  <div class="stat"><div class="stat-num">T4H</div><div class="stat-label">Portfolio Company</div></div>
-  <div class="stat"><div class="stat-num">FUN</div><div class="stat-label">Business Group</div></div>
-  <div class="stat"><div class="stat-num">AU</div><div class="stat-label">Based in Australia</div></div>
-  <div class="stat"><div class="stat-num">2025</div><div class="stat-label">Active</div></div>
+  <div class="stat"><div class="stat-num">🧮</div><div class="stat-label">Calculator</div></div>
+  <div class="stat"><div class="stat-num">💌</div><div class="stat-label">Community</div></div>
+  <div class="stat"><div class="stat-num">🎯</div><div class="stat-label">Challenges</div></div>
+  <div class="stat"><div class="stat-num">💅</div><div class="stat-label">Delulu Certified</div></div>
 </div>
 
+<!-- CALCULATOR SECTION -->
+<section class="section" id="calculator">
+  <div class="section-tag">GirlMath Calculator</div>
+  <h2 class="section-title">Justify Any Purchase</h2>
+  <p class="section-sub">Enter what you bought and how much it cost. Watch GirlMath logic do the rest.</p>
+
+  <div class="calculator-section">
+    <div class="calc-input-row">
+      <input type="text" id="calc-item" placeholder="e.g. Stanley cup, skincare set..." />
+      <input type="number" id="calc-amount" placeholder="Price (AUD $)" min="0" />
+      <button class="btn-calc" onclick="runCalculator()">Justify It 💅</button>
+    </div>
+    <div id="calc-result" class="calc-result">
+      <div class="justified" id="calc-verdict"></div>
+      <div class="logic" id="calc-logic"></div>
+      <div class="calc-pro-upsell">
+        <p>🔓 <strong>Unlock Pro</strong> — unlimited justifications, advanced logic modes & Delulu score tracking</p>
+        <a href="https://buy.stripe.com/5kQdR83bKepx50D4KI4ZG0P" class="btn-unlock" target="_blank">Unlock Calculator Pro — $4.99</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS SECTION -->
+<section class="members-band" id="members">
+  <div class="section-tag" style="color:var(--accent)">GirlMath Members</div>
+  <h2>Join the Delulu Community</h2>
+  <p>Weekly challenges, Delulu Certified badge, exclusive story builder access, and the most entertaining financial content on the internet.</p>
+  <div class="members-price">$9 <span>AUD / month</span></div>
+  <ul class="members-perks">
+    <li>Delulu Certified badge</li>
+    <li>Weekly challenges</li>
+    <li>Story builder</li>
+    <li>Members-only content</li>
+    <li>Cancel anytime</li>
+  </ul>
+  <a href="https://buy.stripe.com/bJedR8dQogxFbp11yw4ZG0Q" class="btn-members" target="_blank">Join Members — $9/mo ✨</a>
+  <div class="members-note">Secure checkout via Stripe · Cancel anytime</div>
+
+  <!-- Email OTP signup for free tier / pre-member -->
+  <div class="members-signup">
+    <h3>💌 Get a free taste — join the waitlist</h3>
+    <div class="otp-step active" id="otp-step-1">
+      <input type="email" class="otp-input" id="otp-email" placeholder="your@email.com" />
+      <button class="btn-otp" onclick="sendOTP()">Send Magic Link</button>
+      <div class="otp-msg" id="otp-msg-1"></div>
+    </div>
+    <div class="otp-step" id="otp-step-2">
+      <p style="color:var(--deep);font-size:0.85rem;margin-bottom:0.75rem">Enter the 6-digit code sent to <strong id="otp-email-display"></strong></p>
+      <input type="text" class="otp-input" id="otp-code" placeholder="123456" maxlength="6" style="letter-spacing:0.3em;text-align:center;font-size:1.2rem" />
+      <button class="btn-otp" onclick="verifyOTP()">Verify & Join Waitlist</button>
+      <div class="otp-msg" id="otp-msg-2"></div>
+    </div>
+    <div class="otp-step" id="otp-step-3">
+      <p style="color:#155724;font-weight:700;font-size:1rem">✓ You're in! Check your inbox.</p>
+      <p style="color:var(--muted);font-size:0.82rem;margin-top:0.4rem">Upgrade to Members for the full experience.</p>
+      <a href="https://buy.stripe.com/bJedR8dQogxFbp11yw4ZG0Q" class="btn-members" style="margin-top:1rem;padding:0.65rem 1.5rem;font-size:0.85rem" target="_blank">Upgrade to Members →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
 <section class="section" id="services">
   <div class="section-tag">What We Do</div>
-  <h2 class="section-title">Our Services</h2>
-  <p class="section-sub">GirlMath is the brand at the intersection of culture, humour, and financial literacy. Celebrating the creative logic of rational spending decisions — and turning the internet's favourite financial meme into a genuine community.</p>
+  <h2 class="section-title">The Full GirlMath Experience</h2>
+  <p class="section-sub">From viral calculator to genuine community — GirlMath is culture, humour, and financial literacy all at once.</p>
   <div class="svc-grid">
-        <div class="svc-card">
-          <div class="svc-icon">🧮</div>
-          <div class="svc-name">GirlMath Calculator</div>
-          <div class="svc-desc">The internet's favourite financial justification tool — calculate exactly how your purchase actually made you money.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">📧</div>
-          <div class="svc-name">Community & Newsletter</div>
-          <div class="svc-desc">Join the GirlMath community for weekly content, deals, and the most entertaining financial commentary on the internet.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">💄</div>
-          <div class="svc-name">Brand Partnerships</div>
-          <div class="svc-desc">Partner with GirlMath for culturally resonant campaigns that reach highly engaged, financially active audiences.</div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">👕</div>
-          <div class="svc-name">GirlMath Merch</div>
-          <div class="svc-desc">Wear your financial philosophy. GirlMath apparel, accessories, and stationery for the practically-minded spender.</div>
-        </div></div>
+    <div class="svc-card">
+      <div class="svc-icon">🧮</div>
+      <div class="svc-name">GirlMath Calculator</div>
+      <div class="svc-desc">The internet's favourite financial justification tool. Calculate exactly how your purchase actually made you money.</div>
+      <a href="#calculator" class="svc-cta">Try Free</a>
+      <span style="font-size:0.75rem;color:var(--muted);margin-left:0.5rem">Pro unlocks from $4.99</span>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">💌</div>
+      <div class="svc-name">Members Community</div>
+      <div class="svc-desc">Weekly challenges, Delulu Certified status, story builder, and exclusive content drops. $9/month.</div>
+      <a href="https://buy.stripe.com/bJedR8dQogxFbp11yw4ZG0Q" class="svc-cta" target="_blank">Join — $9/mo</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">💄</div>
+      <div class="svc-name">Brand Partnerships</div>
+      <div class="svc-desc">Partner with GirlMath for culturally resonant campaigns reaching highly engaged, financially active audiences.</div>
+      <a href="#contact" class="svc-cta outline">Get in Touch</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">👕</div>
+      <div class="svc-name">GirlMath Merch</div>
+      <div class="svc-desc">Wear your financial philosophy. Apparel, accessories and stationery for the practically-minded spender.</div>
+      <a href="#contact" class="svc-cta outline">Coming Soon</a>
+    </div>
+  </div>
 </section>
 
 <div class="cta-band">
-  <h2>Ready to get started?</h2>
-  <p>Talk to the GirlMath team today. We'll respond within 24 hours.</p>
-  <a href="#contact" class="btn-primary" style="color:var(--deep)">Run the Numbers</a>
+  <h2>Ready to make it make sense?</h2>
+  <p>Join 1,000s justifying purchases with GirlMath logic every day.</p>
+  <a href="https://buy.stripe.com/bJedR8dQogxFbp11yw4ZG0Q" class="btn-primary" style="color:var(--deep)" target="_blank">Join Members — $9/mo ✨</a>
 </div>
 
 <section class="section" id="contact">
   <div class="section-tag">Get in Touch</div>
   <h2 class="section-title">Contact Us</h2>
-  <p class="section-sub">Fill in the form and we'll be in touch within 24 hours.</p>
+  <p class="section-sub">Partnerships, press, or just want to say hi — we respond within 24 hours.</p>
   <div class="contact-wrap">
     <div>
       <div class="success-banner" id="success-msg">✓ Thanks! We'll be in touch within 24 hours.</div>
@@ -159,27 +278,146 @@
     </div>
     <div class="contact-info">
       <h3>Get in Touch</h3>
-      <div class="contact-item"><div class="contact-item-icon">📧</div><div><div class="contact-item-label">Email</div><div class="contact-item-text">hello@girlmath.com.au</div></div></div>
+      <div class="contact-item"><div class="contact-item-icon">📧</div><div><div class="contact-item-label">Email</div><div class="contact-item-text"><a href="mailto:hello@girlmath.lol" style="color:var(--primary)">hello@girlmath.lol</a></div></div></div>
+      <div class="contact-item"><div class="contact-item-icon">🌐</div><div><div class="contact-item-label">App</div><div class="contact-item-text"><a href="https://girlmath-logic.lovable.app" style="color:var(--primary)">girlmath-logic.lovable.app</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon">📍</div><div><div class="contact-item-label">Location</div><div class="contact-item-text">Sydney, Australia</div></div></div>
-      <div class="contact-item"><div class="contact-item-icon">🏢</div><div><div class="contact-item-label">ABN</div><div class="contact-item-text">61 605 746 618</div></div></div>
-      <div class="contact-item"><div class="contact-item-icon">🌐</div><div><div class="contact-item-label">Part of T4H Portfolio</div><div class="contact-item-text">tech4humanity.com.au</div></div></div>
+      <div class="contact-item"><div class="contact-item-icon">🏢</div><div><div class="contact-item-label">Part of T4H Portfolio</div><div class="contact-item-text"><a href="https://tech4humanity.com.au" style="color:var(--primary)">tech4humanity.com.au</a></div></div></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <strong>GirlMath</strong> · A Tech for Humanity Company · ABN 61 605 746 618 · Sydney, Australia
+  <div class="footer-links">
+    <a href="#calculator">Calculator</a>
+    <a href="#members">Members</a>
+    <a href="#contact">Contact</a>
+    <a href="mailto:hello@girlmath.lol">hello@girlmath.lol</a>
+    <a href="https://extremespotto.com" target="_blank">ExtremeSpotto</a>
+    <a href="https://aioopsies.com" target="_blank">AI Oopsies</a>
+    <a href="https://apexpredatorinsurance.com" target="_blank">Apex Predator</a>
+  </div>
+  <strong>GirlMath™</strong> · Part of the <strong>Delulu Network</strong> · Powered by <a href="https://tech4humanity.com.au" style="color:var(--accent)">Tech4Humanity</a> · ABN 70 666 271 272 · Sydney, Australia
 </footer>
 
 <script>
-  const BRIDGE = 'https://m5oqj21chd.execute-api.ap-southeast-2.amazonaws.com/lambda/invoke';
-  const SOURCE = 'girlmath';
+  const BRIDGE    = 'https://m5oqj21chd.execute-api.ap-southeast-2.amazonaws.com/lambda/invoke';
+  const BRIDGE_KEY = 'bk_tOH8P5WD3mxBKfICa4yI56vJhpuYOynfdf1d_GfvdK4';
+  const S2_URL    = 'https://pflisxkcxbzboxwidywf.supabase.co';
+  const S2_KEY    = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmbGlzeGtjeGJ6Ym94d2lkeXdmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0MTc0NjksImV4cCI6MjA1OTk5MzQ2OX0.placeholder';
+  const SOURCE    = 'girlmath';
 
+  /* ===== CALCULATOR ===== */
+  const LOGICS = [
+    "If you return it you'd get all the money back — so technically it's free until then.",
+    "You worked hard this week. This is literally your salary spending itself.",
+    "It was on sale. The discount is basically profit.",
+    "You've walked past it 3 times. The emotional labour of restraint costs more.",
+    "If you break it down per use, it's less than a coffee a day.",
+    "You didn't buy that other thing last week. This is the savings working.",
+    "It prevents you from making worse impulse decisions. Protective spend.",
+    "The algorithm showed you this 7 times. Resistance was never an option.",
+    "Buy now, pay later means future-you handles it. Present-you is free.",
+    "You've been manifesting abundance. This is the universe confirming it.",
+  ];
+
+  function runCalculator() {
+    const item   = document.getElementById('calc-item').value.trim();
+    const amount = parseFloat(document.getElementById('calc-amount').value);
+    if (!item)   { alert('Tell GirlMath what you bought 💅'); return; }
+    if (!amount || amount <= 0) { alert('Pop in the price, babe'); return; }
+
+    const uses     = Math.max(1, Math.ceil(amount / 2.5));
+    const perUse   = (amount / uses).toFixed(2);
+    const logic    = LOGICS[Math.floor(Math.random() * LOGICS.length)];
+    const saved    = (amount * 0.3).toFixed(2);
+
+    document.getElementById('calc-verdict').textContent =
+      `✅ ${item} at $${amount.toFixed(2)} is JUSTIFIED`;
+    document.getElementById('calc-logic').innerHTML =
+      `${logic}<br><br>📊 Cost per use: <strong>$${perUse}</strong> · Opportunity savings vs regret: <strong>$${saved}</strong> · Delulu Score: <strong>${Math.floor(60 + Math.random()*38)}/100</strong>`;
+
+    const r = document.getElementById('calc-result');
+    r.classList.add('show');
+    r.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  document.getElementById('calc-item')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('calc-amount').focus();
+  });
+  document.getElementById('calc-amount')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') runCalculator();
+  });
+
+  /* ===== OTP / MEMBERS WAITLIST ===== */
+  function showOTPStep(n) {
+    document.querySelectorAll('.otp-step').forEach((el,i) => {
+      el.classList.toggle('active', i+1 === n);
+    });
+  }
+
+  async function sendOTP() {
+    const email = document.getElementById('otp-email').value.trim();
+    const msg   = document.getElementById('otp-msg-1');
+    if (!email || !email.includes('@')) { msg.textContent = 'Enter a valid email'; msg.style.color='#c00'; return; }
+
+    msg.textContent = 'Sending...'; msg.style.color = 'var(--muted)';
+    try {
+      const r = await fetch(`${S2_URL}/auth/v1/otp`, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','apikey': S2_KEY},
+        body: JSON.stringify({email, create_user: true, options:{shouldCreateUser: true}})
+      });
+      if (r.ok || r.status === 200) {
+        document.getElementById('otp-email-display').textContent = email;
+        showOTPStep(2);
+      } else {
+        const err = await r.json();
+        msg.textContent = err.msg || err.error_description || 'Try again in a moment';
+        msg.style.color = '#c00';
+      }
+    } catch(e) {
+      msg.textContent = 'Network error — try again';
+      msg.style.color = '#c00';
+    }
+  }
+
+  async function verifyOTP() {
+    const email = document.getElementById('otp-email').value.trim();
+    const token = document.getElementById('otp-code').value.trim();
+    const msg   = document.getElementById('otp-msg-2');
+    if (token.length < 6) { msg.textContent = 'Enter the 6-digit code'; msg.style.color='#c00'; return; }
+
+    msg.textContent = 'Verifying...'; msg.style.color = 'var(--muted)';
+    try {
+      const r = await fetch(`${S2_URL}/auth/v1/verify`, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','apikey': S2_KEY},
+        body: JSON.stringify({type:'email', email, token})
+      });
+      const d = await r.json();
+      if (d.access_token || d.user) {
+        // Save lead to bridge
+        await saveLead({email, metadata:{type:'member_waitlist', source:'otp_verified'}});
+        showOTPStep(3);
+      } else {
+        msg.textContent = d.msg || d.error_description || 'Invalid code — try again';
+        msg.style.color = '#c00';
+      }
+    } catch(e) {
+      msg.textContent = 'Network error — try again';
+      msg.style.color = '#c00';
+    }
+  }
+
+  /* ===== CONTACT FORM ===== */
   async function saveLead(data) {
     try {
-      const meta = JSON.stringify(data.metadata || {});
-      const sql = `INSERT INTO cap_leads (email, name, phone, source, status, metadata) VALUES ('${(data.email||'').replace(/'/g,"''")}',' ${(data.name||'').replace(/'/g,"''")}',' ${(data.phone||'').replace(/'/g,"''")}',' ${SOURCE}','new','${meta.replace(/'/g,"''")}'::jsonb) RETURNING id`;
-      const r = await fetch(BRIDGE, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fn:'troy-sql-executor',sql})});
+      const sql = `INSERT INTO cap_leads (email,name,phone,source,status,metadata) VALUES ('${(data.email||'').replace(/'/g,"''")}','${(data.name||'').replace(/'/g,"''")}','${(data.phone||'').replace(/'/g,"''")}','${SOURCE}','new','${JSON.stringify(data.metadata||{}).replace(/'/g,"''")}') ON CONFLICT DO NOTHING RETURNING id`;
+      const r = await fetch(BRIDGE, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','x-api-key': BRIDGE_KEY},
+        body: JSON.stringify({fn:'troy-sql-executor',route:'sql',sql})
+      });
       const d = await r.json();
       return d.rows?.[0]?.id || null;
     } catch(e) { return null; }
@@ -190,17 +428,14 @@
     const email = document.getElementById('cf-email').value.trim();
     const phone = document.getElementById('cf-phone').value.trim();
     const msg   = document.getElementById('cf-msg').value.trim();
-    if (!name) { alert('Please enter your name.'); return; }
-    if (!email && !phone) { alert('Please enter an email or phone number.'); return; }
+    if (!name)             { alert('Please enter your name.'); return; }
+    if (!email && !phone)  { alert('Please enter an email or phone number.'); return; }
     const btn = document.querySelector('.form-submit');
     btn.textContent = 'Sending...'; btn.disabled = true;
-    await saveLead({ name, email, phone, metadata: { type:'enquiry', message: msg } });
+    await saveLead({name, email, phone, metadata:{type:'enquiry', message: msg}});
     btn.textContent = 'Send Message'; btn.disabled = false;
     document.getElementById('success-msg').style.display = 'block';
-    document.getElementById('cf-name').value = '';
-    document.getElementById('cf-email').value = '';
-    document.getElementById('cf-phone').value = '';
-    document.getElementById('cf-msg').value = '';
+    ['cf-name','cf-email','cf-phone','cf-msg'].forEach(id => document.getElementById(id).value = '');
   }
 </script>
 </body>
